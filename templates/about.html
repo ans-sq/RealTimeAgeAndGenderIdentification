@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Age and Gender Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    {% include 'header.html' %}
+    <main style="margin-left: 20px; margin-right: 20px">
+        <h2>Real-time Age and Gender Detection with Deep Learning</h2>
+
+        <h3>Overview:</h3>
+        <p>Our project, "Real-time Age and Gender Detection," utilizes deep learning techniques to automatically identify the age and gender of individuals in real-time video streams. This application leverages Convolutional Neural Networks (CNNs), a type of deep learning architecture, to achieve accurate and efficient detection.</p>
+
+        <h3>Key Concepts:</h3>
+        <ul>
+            <li><strong>Deep Learning:</strong> Deep learning is a subset of machine learning that employs neural networks with many layers to model and understand complex patterns in data.</li>
+            <li><strong>Convolutional Neural Networks (CNNs):</strong> CNNs are specifically designed for processing structured grid-like data, such as images.</li>
+            <li><strong>Real-time Processing:</strong> Real-time processing refers to the ability to perform computations rapidly enough to keep up with the pace of incoming data, such as video frames.</li>
+        </ul>
+
+        <h3>Deployment with Flask:</h3>
+        <p>Our application is deployed using Flask, a lightweight web framework in Python. Flask provides the infrastructure to serve our deep learning model over the web, allowing users to interact with the application through a user-friendly interface.</p>
+    </main>
+     {% include 'footer.html' %}
+</body>
+</html>

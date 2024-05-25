@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	{% include 'header.html' %}
+    <div class="container">
+        <h1>Developers</h1>
+        <table>
+            <tr>
+                <td><img src="static/images/AnsSohail (1).jpg" alt="Ans Sohail" class="developer-image"></td>
+                <td>
+                    <h2>Ans Sohail</h2>
+                    <p>Student ID: L1F22BSCS0005</p>
+                    <p>Associate Software Engineer | Student</p>
+                    <a href="https://www.linkedin.com/in/ans-sq/">LinkedIn</a>
+                    <a href="https://github.com/ans-sq">GitHub</a>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="static/images/SmhShamsi.jpg" alt="Syed Muhammed Haider Shamsi" class="developer-image"></td>
+                <td>
+                    <h2>Syed Muhammed Haider Shamsi</h2>
+                    <p>Student ID: L1F22BSCS0370</p>
+                    <p>Student</p>
+                    <a href="https://www.linkedin.com/in/haider-shamsi-a8aa84295/">LinkedIn</a>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="static/images/AbdulMuqueet.jpg" alt="Abdul Muqueet" class="developer-image"></td>
+                <td>
+                    <h2>Abdul Muqueet</h2>
+                    <p>Student ID: L1F22BSCS0012</p>
+                    <p>Student</p>
+                    <a href="https://www.linkedin.com/in/abdul-muqueet-7646072a2/">LinkedIn</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+	{% include 'footer.html' %}
+</body>
+</html>
