@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real-time Age and Gender Detection</title>
+    <title>About</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
@@ -12,17 +12,58 @@
         <h2>Real-time Age and Gender Detection with Deep Learning</h2>
 
         <h3>Overview:</h3>
-        <p>Our project, "Real-time Age and Gender Detection," utilizes deep learning techniques to automatically identify the age and gender of individuals in real-time video streams. This application leverages Convolutional Neural Networks (CNNs), a type of deep learning architecture, to achieve accurate and efficient detection.</p>
+        <p>Our project, "Real-time Age and Gender Detection," utilizes deep learning techniques to automatically identify
+			the age and gender of individuals in real-time video streams. This application leverages Convolutional Neural
+			Networks (CNNs), a type of deep learning architecture, to achieve accurate and efficient detection.</p>
 
         <h3>Key Concepts:</h3>
         <ul>
-            <li><strong>Deep Learning:</strong> Deep learning is a subset of machine learning that employs neural networks with many layers to model and understand complex patterns in data.</li>
-            <li><strong>Convolutional Neural Networks (CNNs):</strong> CNNs are specifically designed for processing structured grid-like data, such as images.</li>
-            <li><strong>Real-time Processing:</strong> Real-time processing refers to the ability to perform computations rapidly enough to keep up with the pace of incoming data, such as video frames.</li>
+            <li><strong>Deep Learning:</strong> Deep learning is a subset of machine learning and artificial intelligence
+				that deals with algorithms inspired by the structure and function of the brain's neural networks.
+				It involves training artificial neural networks, which are composed of many layers of interconnected
+				nodes called neurons, to recognize patterns and make predictions from complex data. Deep learning
+				algorithms learn to perform tasks by processing large amounts of data, extracting relevant features,
+				and automatically adjusting the parameters of the neural network through a process called backpropagation.
+				Deep learning has achieved remarkable success in various domains, including computer vision, natural
+				language processing, speech recognition, and medical diagnosis, among others. Its ability to automatically
+				learn hierarchical representations of data makes it particularly effective for tasks involving
+				high-dimensional and unstructured data, such as images, audio, and text. Deep learning has revolutionized
+				many industries and applications, driving advancements in fields such as autonomous vehicles, healthcare,
+				finance, and entertainment.</li>
+            <li><strong>Convolutional Neural Networks (CNNs):</strong> Convolutional Neural Networks (CNNs) are a class
+				of deep neural networks widely used in computer vision tasks. They are designed to automatically learn
+				and extract features from input data, particularly images, by applying convolutional operations.
+				CNNs consist of multiple layers, including convolutional layers, pooling layers, activation functions,
+				and fully connected layers. These layers work together to progressively learn hierarchical representations
+				of the input data, capturing both low-level and high-level features. CNNs have revolutionized tasks such
+				as image classification, object detection, and image segmentation, achieving state-of-the-art performance
+				in various domains of computer vision. Their ability to learn spatial hierarchies of features makes them
+				highly effective in analyzing and understanding visual data.</li>
+            <li><strong>Real-time Processing:</strong> Real-time processing refers to the ability of a system to process
+				and respond to input data with minimal delay, typically in milliseconds or microseconds. In the context
+				of applications like video processing, real-time processing involves analyzing and manipulating data
+				streams as they are generated, without significant latency or buffering. This capability is essential
+				for tasks that require immediate feedback or action based on incoming data, such as video streaming,
+				live monitoring, or interactive systems. Real-time processing systems are optimized for efficiency and
+				speed, often utilizing parallel processing, specialized hardware, or optimized algorithms to meet stringent
+				timing requirements. The goal is to ensure that the processing of data keeps pace with the rate of data
+				generation, enabling timely decision-making and seamless user experiences.</li>
         </ul>
 
         <h3>Deployment with Flask:</h3>
-        <p>Our application is deployed using Flask, a lightweight web framework in Python. Flask provides the infrastructure to serve our deep learning model over the web, allowing users to interact with the application through a user-friendly interface.</p>
+        <p>Flask is a lightweight and versatile web framework for Python, designed to make web development simple and
+			scalable. It provides the tools and libraries necessary to build web applications and APIs quickly and
+			efficiently. At its core, Flask is built around the WSGI (Web Server Gateway Interface) protocol,
+			allowing it to interface with various web servers and deployment environments seamlessly.</p>
+
+		<p>One of the defining features of Flask is its simplicity and minimalism. Unlike some larger frameworks,
+			Flask follows a "micro" philosophy, providing only the essential components needed for web development without imposing
+			unnecessary constraints. This minimalistic approach gives developers the flexibility to structure their applications according
+			to their specific needs and preferences.</p>
+
+		<p>Flask is known for its easy-to-understand syntax and clear documentation, making it accessible to both
+			beginners and experienced developers alike. It follows a modular design, allowing developers to add additional
+			functionality through Flask extensions or third-party libraries as needed, without bloating the core framework.</p>
     </main>
      {% include 'footer.html' %}
 </body>
