@@ -6,9 +6,12 @@
     <title>Real-time Age and Gender Identification</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>
+<body style=" background-image: url('static/images/pexels-danielabsi-952670.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;">
     {% include 'header.html' %}
-    <h1>Real-time Age and Gender Detection</h1>
+    <h1 style="color: white">Real-time Age and Gender Detection</h1>
     {% if video %}
         {% include 'video.html' %}
     {% else %}

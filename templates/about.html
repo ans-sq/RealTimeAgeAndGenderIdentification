@@ -6,9 +6,12 @@
     <title>About</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>
+<body style=" background-image: url('static/images/pexels-danielabsi-952670.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;">
     {% include 'header.html' %}
-    <main style="margin-left: 20px; margin-right: 20px">
+    <main style="margin-left: 20px; margin-right: 20px" class="container">
         <h2>Real-time Age and Gender Detection with Deep Learning</h2>
 
         <h3>Overview:</h3>
