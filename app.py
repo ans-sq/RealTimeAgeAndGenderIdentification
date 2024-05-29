@@ -46,9 +46,15 @@ def detect_age_gender():
     video = cv2.VideoCapture(0)
     while True:
         ret, frame = video.read()
+        if not ret:
+            break
         frame, bboxs = faceBox(faceNet, frame)
         for bbox in bboxs:
-            face = frame[bbox[1]:bbox[3], bbox[0]:bbox[2]]
+            x1, y1, x2, y2 = bbox
+            face = frame[y1:y2, x1:x2]
+            # Check if the face region is valid
+            if face.size == 0 or face.shape[0] == 0 or face.shape[1] == 0:
+                continue
             blob = cv2.dnn.blobFromImage(face, 1.0, (227, 227), model_mean_value, swapRB=False)
             genderNet.setInput(blob)
             gender_pred = genderNet.forward()
@@ -57,10 +63,11 @@ def detect_age_gender():
             age_pred = ageNet.forward()
             age = age_list[age_pred[0].argmax()]
             label = "{},{}".format(gender, age)
-            cv2.rectangle(frame, (bbox[0], bbox[1] - 10), (bbox[2], bbox[1]), (0, 255, 0), -1)
-            cv2.putText(frame, label, (bbox[0], bbox[1] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 2,
-                        cv2.LINE_AA)
+            cv2.rectangle(frame, (x1, y1 - 10), (x2, y1), (0, 255, 0), -1)
+            cv2.putText(frame, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 2, cv2.LINE_AA)
         ret, jpeg = cv2.imencode('.jpg', frame)
+        if not ret:
+            continue
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + jpeg.tobytes() + b'\r\n')
 
